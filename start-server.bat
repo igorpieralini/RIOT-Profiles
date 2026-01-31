@@ -1,6 +1,6 @@
 @echo off
 echo ========================================
-echo   RIOT Profiles - Servidor Local
+echo   RIOT Profiles - Ser Localrvido
 echo ========================================
 echo.
 echo Iniciando servidor em http://localhost:8000
