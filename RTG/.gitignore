@@ -1,0 +1,13 @@
+# Configurações com API Keys (não commitar!)
+public/js/config.js
+src/config.php
+
+.env.local
+node_modules/
+vendor/
+.DS_Store
+*.log
+storage/logs/*
+bootstrap/cache/*
+.php_cs.cache
+.phpunit.result.cache

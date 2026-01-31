@@ -1,0 +1,476 @@
+/* ========================================
+   Copa LoL 2026 - Estilo Profissional
+   Inspirado em gamersclub.gg / gamese.gg
+======================================== */
+
+:root {
+  --primary: #009F9F;
+  --primary-dark: #07615F;
+  --primary-light: #00C4C4;
+  --accent: #C08E19;
+  --gold: #C08E19;
+  --dark: #091428;
+  --dark-alt: #0D1E3A;
+  --dark-card: #0F2744;
+  --text: #E8EDF5;
+  --text-muted: #8A9BB5;
+  --border: #1A3A5C;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--dark);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(9, 20, 40, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
+}
+
+.nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.brand-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.main-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover {
+  color: var(--primary);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--primary);
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.btn-lg {
+  padding: 16px 32px;
+  font-size: 1rem;
+}
+
+.hero-pro {
+  padding-top: 120px;
+  padding-bottom: 80px;
+  background: linear-gradient(180deg, var(--dark) 0%, var(--dark-alt) 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.hero-info {
+  flex: 1;
+  max-width: 560px;
+}
+
+.hero-head {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.hero-lead {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+.hero-logo-pro {
+  flex-shrink: 0;
+}
+
+.hero-logo-img-pro {
+  width: 320px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 60px rgba(0, 159, 159, 0.3));
+}
+
+.section-pro {
+  padding: 80px 0;
+}
+
+.section-pro.alt {
+  background: var(--dark-alt);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 32px;
+  letter-spacing: -0.5px;
+}
+
+.section-content p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 720px;
+  line-height: 1.8;
+}
+
+.cards-flex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.info-card {
+  background: var(--dark-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+  transition: all 0.2s;
+}
+
+.info-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
+.info-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.prize-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.prize-main {
+  flex: 1;
+}
+
+.prize-value {
+  display: block;
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--gold);
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.prize-label {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.prize-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 480px;
+}
+
+.prize-logo {
+  flex-shrink: 0;
+}
+
+.prize-img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+.cta-flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 48px;
+  background: var(--dark-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 48px;
+}
+
+.cta-info {
+  flex: 1;
+}
+
+.cta-lead {
+  font-size: 1.125rem;
+  color: var(--text);
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+.cta-list {
+  list-style: none;
+  margin-bottom: 32px;
+}
+
+.cta-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.cta-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.cta-price {
+  flex-shrink: 0;
+  background: var(--dark-alt);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px 40px;
+  text-align: center;
+}
+
+.cta-price-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.cta-price-value {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -1px;
+}
+
+.cta-price-info {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.main-footer {
+  background: var(--dark-alt);
+  border-top: 1px solid var(--border);
+  padding-top: 48px;
+  padding-bottom: 32px;
+}
+
+.footer-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .hero-flex {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-info {
+    max-width: 100%;
+  }
+
+  .hero-logo-img-pro {
+    width: 220px;
+  }
+
+  .prize-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .prize-desc {
+    max-width: 100%;
+  }
+
+  .cta-flex {
+    flex-direction: column;
+  }
+
+  .cta-price {
+    width: 100%;
+  }
+
+  .footer-flex {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-nav {
+    display: none;
+  }
+
+  .hero-head {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .prize-value {
+    font-size: 3rem;
+  }
+
+  .cta-flex {
+    padding: 28px;
+  }
+
+  .cta-price-value {
+    font-size: 2rem;
+  }
+
+  .cards-flex {
+    grid-template-columns: 1fr;
+  }
+}

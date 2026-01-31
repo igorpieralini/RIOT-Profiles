@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIOT Profiles</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                        <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z"/>
+                    </svg>
+                </div>
+                <span class="logo-text">RIOT Profiles</span>
+            </a>
+            <div class="nav-status">
+                <span class="status-dot"></span>
+                API Online
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-badge">
+            ⚡ Powered by RIOT Games API
+        </div>
+        <h1 class="hero-title">
+            RIOT PROFILES
+            <span>Consulte Estatísticas em Tempo Real</span>
+        </h1>
+        <p class="hero-subtitle">
+            Acesse informações detalhadas de jogadores de League of Legends e Valorant. 
+            Visualize ranks, histórico de partidas, maestrias e muito mais.
+        </p>
+    </section>
+
+    <section class="games-section">
+        <div class="games-grid">
+            <!-- League of Legends -->
+            <div class="game-card" onclick="showModal('lolModal')">
+                <div class="game-card-content">
+                    <div class="game-card-icon">⚔️</div>
+                    <h2 class="game-card-title">League of Legends</h2>
+                    <p class="game-card-desc">
+                        Busque invocadores e visualize ranks, maestrias de campeões, 
+                        histórico de partidas ranqueadas e estatísticas detalhadas.
+                    </p>
+                    <span class="game-card-btn">
+                        Consultar Perfil
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 0l1.5 1.5L4 7h12v2H4l5.5 5.5L8 16 0 8z" transform="rotate(180 8 8)"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+            <div class="game-card valorant" onclick="showModal('valorantModal')">
+                <div class="game-card-content">
+                    <div class="game-card-icon">🎯</div>
+                    <h2 class="game-card-title">Valorant</h2>
+                    <p class="game-card-desc">
+                        Encontre jogadores e confira rank competitivo, agentes favoritos, 
+                        ACS médio e histórico de partidas recentes.
+                    </p>
+                    <span class="game-card-btn">
+                        Consultar Perfil
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 0l1.5 1.5L4 7h12v2H4l5.5 5.5L8 16 0 8z" transform="rotate(180 8 8)"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="lolModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">
+                    <span>⚔️</span> League of Legends
+                </h2>
+                <button class="modal-close" onclick="closeModal('lolModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="lolForm">
+                    <div class="form-group">
+                        <label class="form-label">Riot ID</label>
+                        <input type="text" id="lolName" class="form-input" placeholder="Nome#Tag" required>
+                        <p class="form-hint">Exemplo: ScribowFire#2381</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Região</label>
+                        <select id="lolRegion" class="form-select">
+                            <option value="br1">Brasil (BR)</option>
+                            <option value="na1">América do Norte (NA)</option>
+                            <option value="euw1">Europa Ocidental (EUW)</option>
+                            <option value="eune1">Europa Nórdica (EUNE)</option>
+                            <option value="kr">Coréia do Sul (KR)</option>
+                            <option value="jp1">Japão (JP)</option>
+                            <option value="la1">LATAM Norte (LAN)</option>
+                            <option value="la2">LATAM Sul (LAS)</option>
+                        </select>
+                    </div>
+                    
+                    <div id="lolAlert" class="alert" style="display: none;"></div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        Buscar Invocador
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="valorantModal" class="modal">
+        <div class="modal-content" style="border-color: rgba(255, 70, 85, 0.3);">
+            <div class="modal-header" style="border-color: rgba(255, 70, 85, 0.2);">
+                <h2 class="modal-title" style="color: #ff4655;">
+                    <span>🎯</span> Valorant
+                </h2>
+                <button class="modal-close" onclick="closeModal('valorantModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="valorantForm">
+                    <div class="form-group">
+                        <label class="form-label" style="color: #ff4655;">Riot ID</label>
+                        <input type="text" id="valorantRiotId" class="form-input" placeholder="Nome#Tag" required>
+                        <p class="form-hint">Exemplo: Player#BR1</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" style="color: #ff4655;">Região</label>
+                        <select id="valorantRegion" class="form-select">
+                            <option value="br">Brasil (BR)</option>
+                            <option value="na">América do Norte (NA)</option>
+                            <option value="eu">Europa (EU)</option>
+                            <option value="ap">Ásia-Pacífico (AP)</option>
+                            <option value="kr">Coréia do Sul (KR)</option>
+                        </select>
+                    </div>
+                    
+                    <div id="valorantAlert" class="alert" style="display: none;"></div>
+                    
+                    <button type="submit" class="btn btn-red">
+                        Buscar Jogador
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>RIOT Profiles © 2026 — Não oficial. Dados via <a href="https://developer.riotgames.com/" target="_blank">RIOT Games API</a></p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

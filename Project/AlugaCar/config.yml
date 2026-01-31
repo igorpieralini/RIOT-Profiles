@@ -1,7 +1,0 @@
-database:
-  url: "jdbc:mysql://localhost:3306/carsbase"
-  user: "root"
-  password: "Igorpro2020#@"
-
-timezone: "UTC"
-

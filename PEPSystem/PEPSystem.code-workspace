@@ -1,0 +1,23 @@
+{
+  "folders": [
+    { "path": "PEP-Backend" },
+    { "path": "PEP-FrontEnd" },
+    { "path": "PEP-Working" },
+    { "path": ".vscode" }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/dist": true
+    },
+    "editor.formatOnSave": true
+  },
+  "extensions": {
+    "recommendations": [
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "angular.ng-template",
+      "ms-azuretools.vscode-docker"
+    ]
+  }
+}

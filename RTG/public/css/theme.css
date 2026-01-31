@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Beaufort+for+LOL:wght@400;700&family=Spiegel:wght@400;600;700&display=swap');
+
+:root {
+    /* ===== Cores RIOT ===== */
+    --riot-gold: #c89b3c;
+    --riot-gold-light: #f0e6d2;
+    --riot-gold-dark: #785a28;
+    
+    --riot-blue: #0397ab;
+    --riot-blue-light: #0ac8b9;
+    
+    --riot-red: #ff4655;
+    --riot-red-dark: #cc3344;
+    
+    /* ===== Cores de Fundo ===== */
+    --riot-dark: #010a13;
+    --riot-dark-2: #0a1428;
+    --riot-dark-3: #091428;
+    --riot-gray: #1e2328;
+    --riot-gray-light: #3c3c41;
+    
+    /* ===== Cores de Texto ===== */
+    --riot-text: #a09b8c;
+    --riot-text-light: #f0e6d2;
+    
+    /* ===== Cores para Profile (compatibilidade) ===== */
+    --primary-blue: #3b82f6;
+    --primary-blue-dark: #1d4ed8;
+    --primary-red: #ef4444;
+    --primary-red-dark: #dc2626;
+    
+    --accent-yellow: #fbbf24;
+    --accent-green: #22c55e;
+    --accent-cyan: #06b6d4;
+    --accent-purple: #8b5cf6;
+    
+    --bg-slate-900: #0f172a;
+    --bg-slate-800: #1e293b;
+    --bg-slate-700: #334155;
+    --bg-slate-600: #475569;
+    --bg-slate-500: #64748b;
+    
+    --text-slate-100: #f1f5f9;
+    --text-slate-300: #cbd5e1;
+    --text-slate-400: #94a3b8;
+    
+    /* ===== Gradientes ===== */
+    --gradient-gold: linear-gradient(180deg, #c89b3c 0%, #785a28 100%);
+    --gradient-dark: linear-gradient(180deg, #0a1428 0%, #010a13 100%);
+    --gradient-card: linear-gradient(135deg, rgba(30, 35, 40, 0.9) 0%, rgba(10, 20, 40, 0.95) 100%);
+    --gradient-red: linear-gradient(180deg, #ff4655 0%, #cc3344 100%);
+    
+    /* ===== Efeitos e Sombras ===== */
+    --glow-gold: 0 0 20px rgba(200, 155, 60, 0.4);
+    --glow-blue: 0 0 20px rgba(3, 151, 171, 0.4);
+    --glow-red: 0 0 20px rgba(255, 70, 85, 0.4);
+    
+    /* ===== Bordas ===== */
+    --border-radius: 12px;
+    --border-radius-sm: 4px;
+    
+    /* ===== Transições ===== */
+    --transition: all 0.3s ease;
+    --transition-fast: all 0.2s ease;
+    --transition-slow: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* ===== Fontes ===== */
+    --font-display: 'Beaufort for LOL', serif;
+    --font-body: 'Spiegel', 'Segoe UI', sans-serif;
+    --font-mono: 'Courier New', monospace;
+}
