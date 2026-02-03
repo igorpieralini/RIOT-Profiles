@@ -1,153 +1,159 @@
 # 🎮 RIOT Profiles
 
-Aplicação web para consulta de perfis de **League of Legends** e **Valorant**.
+Web application for querying **League of Legends** and **Valorant** profiles.
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat\&logo=html5\&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat\&logo=css3\&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat\&logo=javascript\&logoColor=black)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat\&logo=php\&logoColor=white)
 
 ---
 
-## ✨ Funcionalidades
+## ✨ Features
 
 ### League of Legends
-- 🏆 Rank e divisão (Solo/Duo e Flex)
-- 👤 Ícone de invocador e nível
-- 🎯 Top 3 campeões com maestria
-- 📊 Histórico de partidas ranqueadas
+
+* 🏆 Rank and division (Solo/Duo and Flex)
+* 👤 Summoner icon and level
+* 🎯 Top 3 champions by mastery
+* 📊 Ranked match history
 
 ### Valorant
-- 🏆 Rank competitivo e RR
-- 👤 Card do jogador e nível
-- 🎯 Top agentes jogados
-- 📊 Histórico de partidas com KDA
+
+* 🏆 Competitive rank and RR
+* 👤 Player card and level
+* 🎯 Top played agents
+* 📊 Match history with KDA
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
 ```
 RTG/
 ├── public/                         # Front-end
-│   ├── index.html                  # Página inicial
+│   ├── index.html                  # Home page
 │   ├── assets/
 │   │   └── icons/
-│   │       └── favicon.svg         # Ícone do site
+│   │       └── favicon.svg         # Site icon
 │   ├── css/
-│   │   ├── theme.css               # Variáveis de cores
-│   │   ├── base.css                # Reset e estilos globais
-│   │   ├── index.css               # Estilos da home
-│   │   ├── lol-profile.css         # Estilos LOL
-│   │   └── valorant-profile.css    # Estilos Valorant
+│   │   ├── theme.css               # Color variables
+│   │   ├── base.css                # Reset and global styles
+│   │   ├── index.css               # Home styles
+│   │   ├── lol-profile.css         # LOL styles
+│   │   └── valorant-profile.css    # Valorant styles
 │   ├── js/
-│   │   ├── app.js                  # Script da home
-│   │   ├── lol-profile.js          # Script LOL
-│   │   └── valorant-profile.js     # Script Valorant
+│   │   ├── app.js                  # Home script
+│   │   ├── lol-profile.js          # LOL script
+│   │   └── valorant-profile.js     # Valorant script
 │   └── pages/
-│       ├── lol.html                # Página de perfil LOL
-│       └── valorant.html           # Página de perfil Valorant
+│       ├── lol.html                # LOL profile page
+│       └── valorant.html           # Valorant profile page
 ├── src/
-│   └── riot-proxy.php              # Proxy PHP (opcional)
-├── start-server.bat                # Script para iniciar servidor
+│   └── riot-proxy.php              # PHP proxy (optional)
+├── start-server.bat                # Script to start server
 └── README.md
 ```
 
 ---
 
-## 🚀 Como Usar
+## 🚀 How to Use
 
-### Pré-requisitos
+### Requirements
 
-- **PHP 8.0+** instalado ([Download](https://www.php.net/downloads))
+* **PHP 8.0+** installed ([Download](https://www.php.net/downloads))
 
-### Instalação do PHP (Windows)
+### Installing PHP (Windows)
 
-A forma mais fácil é usar o **WinGet**:
+The easiest way is using **WinGet**:
 
 ```powershell
 winget install PHP.PHP.8.3
 ```
 
-Ou baixe manualmente em https://windows.php.net/download/
+Or download manually from [https://windows.php.net/download/](https://windows.php.net/download/)
 
-### Configuração das API Keys
+### API Key Configuration
 
-1. Copie o arquivo de exemplo:
+1. Copy the example file:
+
    ```bash
    cp public/js/config.example.js public/js/config.js
    ```
 
-2. Edite `public/js/config.js` e adicione suas keys:
+2. Edit `public/js/config.js` and add your keys:
 
 ```javascript
 var CONFIG = {
-    RIOT_API_KEY: 'SUA_RIOT_KEY_AQUI',
-    HENRIK_API_KEY: 'SUA_HENRIK_KEY_AQUI',
+    RIOT_API_KEY: 'YOUR_RIOT_KEY_HERE',
+    HENRIK_API_KEY: 'YOUR_HENRIK_KEY_HERE',
     // ...
 };
 ```
 
-#### Obtendo as Keys
+#### Getting the Keys
 
-| API | Portal | Observação |
-|-----|--------|------------|
-| RIOT Games | https://developer.riotgames.com/ | Keys de dev expiram em 24h |
-| Henrik API | https://api.henrikdev.xyz/dashboard/ | Gratuita, sem expiração |
+| API        | Portal                                                                       | Notes                     |
+| ---------- | ---------------------------------------------------------------------------- | ------------------------- |
+| RIOT Games | [https://developer.riotgames.com/](https://developer.riotgames.com/)         | Dev keys expire every 24h |
+| Henrik API | [https://api.henrikdev.xyz/dashboard/](https://api.henrikdev.xyz/dashboard/) | Free, no expiration       |
 
-> ⚠️ **Importante**: O arquivo `config.js` está no `.gitignore`. Nunca commite suas keys!
+> ⚠️ **Important**: The `config.js` file is in `.gitignore`. Never commit your keys!
 
-### Rodando o Projeto
+### Running the Project
 
-**Opção 1: Script Automático (Windows)**
+**Option 1: Automatic Script (Windows)**
 
 ```
-Dê duplo clique em start-server.bat
+Double-click start-server.bat
 ```
 
-**Opção 2: Terminal**
+**Option 2: Terminal**
 
 ```bash
 cd public
 php -S localhost:8000
 ```
 
-**Opção 3: VS Code**
+**Option 3: VS Code**
 
-1. Instale a extensão "PHP Server"
-2. Clique com botão direito em `public/index.html`
-3. Selecione "PHP Server: Serve Project"
+1. Install the "PHP Server" extension
+2. Right-click `public/index.html`
+3. Select "PHP Server: Serve Project"
 
-### Acessando
+### Accessing
 
-Abra no navegador: **http://localhost:8000**
+Open in your browser: **[http://localhost:8000](http://localhost:8000)**
 
 ---
 
-## 🔧 Configuração Avançada
+## 🔧 Advanced Configuration
 
-### Extensão OpenSSL (necessária para HTTPS)
+### OpenSSL Extension (required for HTTPS)
 
-Se aparecer erro de SSL, ative a extensão no `php.ini`:
+If you get SSL errors, enable the extension in `php.ini`:
 
-1. Encontre o arquivo `php.ini`:
+1. Find the `php.ini` file:
+
    ```powershell
    php --ini
    ```
 
-2. Edite e descomente a linha:
+2. Edit and uncomment:
+
    ```ini
    extension=openssl
    ```
 
-3. Verifique se o `extension_dir` está correto:
+3. Make sure `extension_dir` is correct:
+
    ```ini
    extension_dir = "C:/Program Files/PHP/ext"
    ```
 
-### Porta Diferente
+### Custom Port
 
-Para usar outra porta:
+To use a different port:
 
 ```bash
 php -S localhost:3000
@@ -155,68 +161,74 @@ php -S localhost:3000
 
 ---
 
-## 🎨 Personalização
+## 🎨 Customization
 
-### Cores (theme.css)
+### Colors (theme.css)
 
 ```css
 :root {
-    --riot-gold: #c89b3c;      /* Dourado principal */
-    --riot-blue: #0397ab;      /* Azul LOL */
-    --riot-red: #ff4655;       /* Vermelho Valorant */
-    --riot-dark: #010a13;      /* Fundo escuro */
+    --riot-gold: #c89b3c;      /* Main gold */
+    --riot-blue: #0397ab;      /* LOL blue */
+    --riot-red: #ff4655;       /* Valorant red */
+    --riot-dark: #010a13;      /* Dark background */
 }
 ```
 
 ---
 
-## 📡 APIs Utilizadas
+## 📡 APIs Used
 
-| Jogo | API | Autenticação |
-|------|-----|--------------|
-| League of Legends | [RIOT Games API](https://developer.riotgames.com/) | API Key (gratuita) |
-| Valorant | [Henrik Dev API](https://docs.henrikdev.xyz/) | API Key (gratuita) |
+| Game              | API                                                | Authentication |
+| ----------------- | -------------------------------------------------- | -------------- |
+| League of Legends | [RIOT Games API](https://developer.riotgames.com/) | API Key (free) |
+| Valorant          | [Henrik Dev API](https://docs.henrikdev.xyz/)      | API Key (free) |
 
-### Endpoints LOL
-- `/riot/account/v1/accounts/by-riot-id/{name}/{tag}` - Busca por Riot ID
-- `/lol/summoner/v4/summoners/by-puuid/{puuid}` - Dados do invocador
-- `/lol/league/v4/entries/by-puuid/{puuid}` - Ranked
-- `/lol/champion-mastery/v4/champion-masteries/by-puuid/{puuid}` - Maestrias
-- `/lol/match/v5/matches/by-puuid/{puuid}/ids` - IDs das partidas
+### LOL Endpoints
 
-### Endpoints Valorant (Henrik)
-- `/valorant/v2/account/{name}/{tag}` - Dados da conta
-- `/valorant/v3/mmr/{region}/{name}/{tag}` - Rank competitivo
-- `/valorant/v4/matches/{region}/{name}/{tag}` - Histórico de partidas
+* `/riot/account/v1/accounts/by-riot-id/{name}/{tag}` – Riot ID lookup
+* `/lol/summoner/v4/summoners/by-puuid/{puuid}` – Summoner data
+* `/lol/league/v4/entries/by-puuid/{puuid}` – Ranked data
+* `/lol/champion-mastery/v4/champion-masteries/by-puuid/{puuid}` – Mastery data
+* `/lol/match/v5/matches/by-puuid/{puuid}/ids` – Match IDs
 
----
+### Valorant Endpoints (Henrik)
 
-## 🐛 Problemas Comuns
-
-### "PHP não reconhecido"
-Adicione o PHP ao PATH do sistema ou use o caminho completo.
-
-### "API Key expirada" (LOL)
-Renove em https://developer.riotgames.com/ - keys de dev expiram em 24h.
-
-### "Erro 401" (Valorant)
-Verifique se a Henrik API Key está correta.
-
-### "Jogador não encontrado"
-- Verifique se o Riot ID está correto (Nome#Tag)
-- Confirme a região selecionada
+* `/valorant/v2/account/{name}/{tag}` – Account data
+* `/valorant/v3/mmr/{region}/{name}/{tag}` – Competitive rank
+* `/valorant/v4/matches/{region}/{name}/{tag}` – Match history
 
 ---
 
-## 📝 Licença
+## 🐛 Common Issues
 
-Projeto educacional. Não afiliado à Riot Games.
+### "PHP not recognized"
+
+Add PHP to your system PATH or use the full executable path.
+
+### "API Key expired" (LOL)
+
+Renew it at [https://developer.riotgames.com/](https://developer.riotgames.com/) – dev keys expire every 24h.
+
+### "401 Error" (Valorant)
+
+Check if the Henrik API Key is correct.
+
+### "Player not found"
+
+* Make sure the Riot ID is correct (Name#Tag)
+* Confirm the selected region
 
 ---
 
-## 🔗 Links Úteis
+## 📝 License
 
-- [RIOT Developer Portal](https://developer.riotgames.com/)
-- [Henrik API Docs](https://docs.henrikdev.xyz/)
-- [Data Dragon (Assets LOL)](https://developer.riotgames.com/docs/lol#data-dragon)
-- [Community Dragon](https://communitydragon.org/)
+Educational project. Not affiliated with Riot Games.
+
+---
+
+## 🔗 Useful Links
+
+* [RIOT Developer Portal](https://developer.riotgames.com/)
+* [Henrik API Docs](https://docs.henrikdev.xyz/)
+* [Data Dragon (LOL Assets)](https://developer.riotgames.com/docs/lol#data-dragon)
+* [Community Dragon](https://communitydragon.org/)
